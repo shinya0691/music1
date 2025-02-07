@@ -1,7 +1,6 @@
 <x-app-layout>
         <h1>Blog Name</h1>
-        <a href='/music/create'>create</a>
-
+       
         <div class='music'>
             @foreach ($genres as $genre)
                 <div class='genre'>
@@ -23,9 +22,7 @@
                 </div>
             @endforeach
             
-           
-
-            
+        
             <script>
                 function deletePost(id) 
                 {

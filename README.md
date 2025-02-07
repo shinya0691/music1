@@ -1,66 +1,67 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## ■ Music
+![ogp](https://user-images.githubusercontent.com/45684938/158291222-fc31b89b-8845-459a-acf6-39ac034d9c61.png)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## ■ アプリURL
+http://127.0.0.1:8000/dashboard
 
-## About Laravel
+## ■ サービス概要
+音楽好き同士で共感し合えるWebアプリです。
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ■ アプリを作ったキッカケ
+誰しも長い人生を生きていると、失敗したり、挫折することは多々あると思います。
+その失敗や挫折したところから音楽の力で立ち直ることができればいいなという想いでこのアプリを作りました。
+（普段の疲れを癒す場でもありたいです）
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ■ アプリに込めた思い・実現したい未来
+**「自分の人生に悲観する人を減らしたい」**<br>
+そんな思いを込めてサービスを作りました。<br>
+人の人生を覗いてみると、今悩んでいることがちっぽけに感じたり、その悩みを解決するヒントが隠されているかもしれません。<br>
+このアプリを通して、人生をポジティブに捉える人が１人でも増えてくれると嬉しいと思っています。
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## ■ 主なページと機能
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+| Topページ | ユーザ登録ページ |
+| ---- | ---- |
+| [![Image from Gyazo](https://i.gyazo.com/24b0fedc570c0cebf46fdb07c1459740.png)](https://gyazo.com/24b0fedc570c0cebf46fdb07c1459740) | [![Image from Gyazo](https://i.gyazo.com/d24edd4d0e23324d34a8093b76909de4.png)](https://gyazo.com/d24edd4d0e23324d34a8093b76909de4) |
+| Topページはシンプルなデザインを意識し、サービスの特徴が把握しやすいように工夫しました。 | 各フォームの下にエラーメッセージを表示することで、ユーザーにわかりやすい設計を意識しました。 |
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+| ログインページ |   
+| [![Image from Gyazo](https://i.gyazo.com/58cecbe0dcaf5e2b9c6dda9a8bd9eaf6.png)](https://gyazo.com/58cecbe0dcaf5e2b9c6dda9a8bd9eaf6) |　[![Image from Gyazo](https://i.gyazo.com/90f6fa0f0ca65a6e2c6deaa217883c1d.gif)](https://gyazo.com/90f6fa0f0ca65a6e2c6deaa217883c1d)|
+| ブラウザを閉じてもログインを継続させるため、ログイン保持機能を実装しました。 | 出来事は複数登録することを考慮して、画面遷移を無くし、非同期でデータだけをやり取りする形にしました。また「公開設定」を実装し、一般に公開したくない人を考慮した設計をしました。 |
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+| 一覧ページ | 詳細ページ |
+| ---- | ---- |
+| [![Image from Gyazo](https://i.gyazo.com/ef79cc3599301c3c04364404703c4660.gif)](https://gyazo.com/ef79cc3599301c3c04364404703c4660) |　[![Image from Gyazo](https://i.gyazo.com/5c9af71c368f17d26c9e1d45e935a5a8.gif)](https://gyazo.com/5c9af71c368f17d26c9e1d45e935a5a8)|
+| 一覧画面では、公開されている自分史のみ表示しています。「性別」や「年齢」で検索できるようにしています。また、グラフを画像として表示する事で、どんな自分史かイメージできるようデザインを工夫しました。 | グラフのhoverすることで、詳細な情報を閲覧できます。コメントやいいね機能も実装し、ユーザー同士の交流を図っています。TwitteリンクではグラフをOGPとして共有できるようにしています。また、グラフはダウンロードして外部で利用する事ができます。 |
 
-## Laravel Sponsors
+| マイページ | プロフィール編集ページ |
+| ---- | ---- |
+| [![Image from 　Gyazo](https://i.gyazo.com/79557b0d1c8e2b48b13b95fbef42bd03.png)](https://gyazo.com/79557b0d1c8e2b48b13b95fbef42bd03) |　[![Image from Gyazo](https://i.gyazo.com/dde103678376c106e77d84746b8e51d3.png)](https://gyazo.com/dde103678376c106e77d84746b8e51d3)|
+| ユーザーの詳細情報や作成した自分史を表示しています。こちらから退会も可能です。 | プロフィール編集ができます。 |
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## ■ 使用技術
 
-### Premium Partners
+#### フロントエンド
+- HTML
+- CSS
+- Laravel（フレームワーク）
+- JavaScript
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+#### データベース
+- MySQL 
 
-## Contributing
+#### ストレージサービス
+- 
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## ■ ER図
 
-## Code of Conduct
+[![Image from Gyazo](https://i.gyazo.com/8a2bf28901681d210a1eef870c55c4a0.png)](https://gyazo.com/8a2bf28901681d210a1eef870c55c4a0)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+https://app.diagrams.net/?src=about#G1VuTSIdLMgvtgosmCS90aHUxXr0jZjm2B
 
-## Security Vulnerabilities
+## ■ 画面遷移図
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+[![Image from Gyazo](https://i.gyazo.com/50701a02cf01336ac2f2f58897cb4a31.png)](https://gyazo.com/50701a02cf01336ac2f2f58897cb4a31)
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+https://www.figma.com/file/tpd5guOIGeBcx2N1hK30O4/Wireframe?node-id=0%3A1

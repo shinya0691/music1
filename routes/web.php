@@ -26,15 +26,11 @@ Route::get('/', [MusicController::class,'index'])->name('index');
 Route::get('/music/{music}', [MusicController::class ,'show']);
 
 
+
 Route::post('/music/{music}/comments', [CommentController::class, 'store'])->middleware('auth')->name('comments.store');
 Route::delete('/comments/{comment}', [CommentController::class, 'destroy'])->middleware('auth')->name('comments.destroy');
 
-//Route::post('/music', [MusicController::class, 'store']);
-//Route::post('/music/{music}/reviews', [ReviewController::class, 'store'])->middleware('auth');
 
-//Route::get('/music/{music}/reviews', [ReviewController::class, 'show']);
-//Route::get('/music/{music}/edit', [MusicController::class, 'edit']);
-//Route::put('/music/{music}', [MusicController::class, 'update']);
 });
 
 
