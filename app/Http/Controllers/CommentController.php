@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Auth;
 
 class CommentController extends Controller
 {
+    //public function index($musicId)
+    //{
+        //$music = Music::with('comments')->findOrFail($musicId);
+       // return response()->json($music->comments);
+    //}
     public function store(Request $request, Music $music)
     {
         $request->validate([
